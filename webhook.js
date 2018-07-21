@@ -26,7 +26,7 @@ let HEADER = process.env.TITLE;
 fastify.post("/integrate/webhook/:tid", function(request, reply) {
   let body = request.body;
 
-  THREAD = req.params.tid;
+  THREAD = request.params.tid;
   AUTHOR = "Author: " + body.commits[0].author.name;
   BRANCH = "Branch: " + body.ref.replace("refs/heads/", "");
   DATE = "Date: " + body.commits[0].timestamp;
