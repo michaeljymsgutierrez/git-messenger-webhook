@@ -34,12 +34,7 @@ fastify.post("/integrate/webhook/:tid", function(request, reply) {
   COMMIT = "Commit: " + body.commits[0].message;
   POST_DATA = `\n${HEADER}\n\n${BRANCH}\n${COMMIT}\n${AUTHOR}\n${DATE}\n${HASH}\n`;
 
-  if (
-    process.env.TITLE &&
-    process.env.EMAIL &&
-    process.env.PASSWORD &&
-    process.env.THREAD
-  ) {
+  if (process.env.TITLE && process.env.EMAIL && process.env.PASSWORD) {
     login(
       {
         email: process.env.EMAIL,
