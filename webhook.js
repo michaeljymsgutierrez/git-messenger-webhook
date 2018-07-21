@@ -1,6 +1,6 @@
 /**
- * Git + Facebook webhook like messenger
- *
+ * Git + Facebook Webhook API
+ * Created by: Chaelgutierrez
  */
 ("use strict");
 
