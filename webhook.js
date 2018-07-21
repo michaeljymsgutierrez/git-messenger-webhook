@@ -33,29 +33,31 @@ fastify.post("/integrate/webhook", function(request, reply) {
   POST_DATA = `\n${HEADER}\n\n${BRANCH}\n${COMMIT}\n${AUTHOR}\n${DATE}\n${HASH}\n`;
   console.log(POST_DATA);
 
-  // if (
-  //   process.env.TITLE &&
-  //   process.env.EMAIL &&
-  //   process.env.PASSWORD &&
-  //   process.env.THREAD
-  // ) {
-  //   login(
-  //     {
-  //       email: process.env.EMAIL,
-  //       password: process.env.PASSWORD
-  //     },
-  //     (err, api) => {
-  //       if (err) {
-  //         return console.error(err);
-  //       } else {
-  //         var yourID = process.env.THREAD;
-  //         api.sendMessage(POST_DATA, yourID);
-  //       }
-  //     }
-  //   );
-  // } else {
-  //   console.log("Oops!, there is something wrong with your '.env' file . . .");
-  // }
+  if (
+    process.env.TITLE &&
+    process.env.EMAIL &&
+    process.env.PASSWORD &&
+    process.env.THREAD
+    
+  ) {
+    login(
+      {
+        email: process.env.EMAIL,
+        password: process.env.PASSWORD
+      },
+      (err, api) => {
+        if (err) {
+          return console.error(err);
+        } else {
+          var yourID = process.env.THREAD;
+          reply.send({ success: true });
+          api.sendMessage(POST_DATA, yourID);
+        }
+      }
+    );
+  } else {
+    console.log("Oops!, there is something wrong with your '.env' file . . .");
+  }
 });
 
 fastify.listen(port, host, (err, address) => {
