@@ -31,14 +31,12 @@ fastify.post("/integrate/webhook", function(request, reply) {
   HASH = "Hash: " + body.commits[0].id;
   COMMIT = "Commit: " + body.commits[0].message;
   POST_DATA = `\n${HEADER}\n\n${BRANCH}\n${COMMIT}\n${AUTHOR}\n${DATE}\n${HASH}\n`;
-  console.log(POST_DATA);
 
   if (
     process.env.TITLE &&
     process.env.EMAIL &&
     process.env.PASSWORD &&
     process.env.THREAD
-    
   ) {
     login(
       {
