@@ -27,11 +27,11 @@ fastify.post("/integrate/webhook/:tid", function(request, reply) {
   let body = request.body;
 
   THREAD = request.params.tid;
-  AUTHOR = "Author: " + body.commits[0].author.name;
-  BRANCH = "Branch: " + body.ref.replace("refs/heads/", "");
-  DATE = "Date: " + body.commits[0].timestamp;
-  HASH = "Hash: " + body.commits[0].id;
-  COMMIT = "Commit: " + body.commits[0].message;
+  AUTHOR = "Author: " + body.commits[0].author.name.trim();
+  BRANCH = "Branch: " + body.ref.replace("refs/heads/", "").trim();
+  DATE = "Date: " + body.commits[0].timestamp.trim();
+  HASH = "Hash: " + body.commits[0].id.trim();
+  COMMIT = "Commit: " + body.commits[0].message.trim();
   POST_DATA = `\n${HEADER}\n\n${BRANCH}\n${COMMIT}\n${AUTHOR}\n${DATE}\n${HASH}\n`;
 
   if (process.env.TITLE && process.env.EMAIL && process.env.PASSWORD) {
