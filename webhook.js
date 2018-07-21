@@ -19,12 +19,14 @@ let DATE = null;
 let HASH = null;
 let COMMIT = null;
 let BRANCH = null;
+let THREAD = null;
 let POST_DATA = null;
 let HEADER = process.env.TITLE;
 
-fastify.post("/integrate/webhook", function(request, reply) {
+fastify.post("/integrate/webhook/:tid", function(request, reply) {
   let body = request.body;
-  console.log(body);
+
+  THREAD = req.params.tid;
   AUTHOR = "Author: " + body.commits[0].author.name;
   BRANCH = "Branch: " + body.ref.replace("refs/heads/", "");
   DATE = "Date: " + body.commits[0].timestamp;
@@ -47,7 +49,7 @@ fastify.post("/integrate/webhook", function(request, reply) {
         if (err) {
           return console.error(err);
         } else {
-          var yourID = process.env.THREAD;
+          let yourID = THREAD;
           reply.send({ success: true });
           api.sendMessage(POST_DATA, yourID);
         }
