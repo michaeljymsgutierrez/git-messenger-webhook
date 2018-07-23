@@ -13,7 +13,7 @@ const fastify = require("fastify")({
 });
 
 let host = ip.address();
-let port = "8080";
+let port = process.env.WEBHOOK_PORT ? process.env.WEBHOOK_PORT : "8080";
 let AUTHOR = null;
 let DATE = null;
 let HASH = null;
