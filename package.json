@@ -1,7 +1,7 @@
 {
-  "name": "git-messenger-chatbot",
+  "name": "git-messenger-webhook",
   "version": "1.0.0",
-  "description": "A simple git push chatbot event notification for facebook messenger",
+  "description": "A simple git push webhook event notification for facebook messenger",
   "main": "webhook.js",
   "dependencies": {
     "dotenv": "^6.0.0",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaeljymsgutierrez/git-messenger-chatbot.git"
+    "url": "git+https://github.com/michaeljymsgutierrez/git-messenger-webhook.git"
   },
   "keywords": [
     "facebook-chat-api",
@@ -34,7 +34,7 @@
   "author": "Chael Gutierrez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/michaeljymsgutierrez/git-messenger-chatbot/issues"
+    "url": "https://github.com/michaeljymsgutierrez/git-messenger-webhook/issues"
   },
-  "homepage": "https://github.com/michaeljymsgutierrez/git-messenger-chatbot#readme"
+  "homepage": "https://github.com/michaeljymsgutierrez/git-messenger-webhook#readme"
 }
