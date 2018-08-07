@@ -1,5 +1,5 @@
-# Git Messenger Chatbot <img src="https://i.imgur.com/7CRqZuu.png" alt="gitmessengerchatbot" width="130px"/>
-A simple git chatbot event notification for facebook messenger.
+# Git Messenger Webhook <img src="https://i.imgur.com/7CRqZuu.png" alt="gitmessengerchatbot" width="130px"/>
+A simple git webhook event notification for facebook messenger.
 
 - [x] Github Webhook
 - [x] Gitlab Webhook
