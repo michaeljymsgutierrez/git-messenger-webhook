@@ -33,7 +33,7 @@ _sample_
 ![](https://i.imgur.com/v392OCO.gif)
 
 
-6. Try it yourself :)
+6. Try it yourself :smiley:
 
 ![](https://i.imgur.com/aXNIesX.gif)
 
