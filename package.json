@@ -13,7 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "deploy:prod": "pm2 start webhook.js && pm2 startup && pm2 save"
+    "deploy:prod": "yarn install && pm2 start webhook.js --name webhook && pm2 startup && pm2 save",
+    "deploy:update": "git pull origin master && yarn install && pm2 restart webhook "
   },
   "repository": {
     "type": "git",
