@@ -1,5 +1,7 @@
 # Git Messenger Webhook <img src="https://i.imgur.com/7CRqZuu.png" alt="gitmessengerchatbot" width="130px"/>
+
 A simple git webhook event notification for facebook messenger.
+
 
 - [x] Github Webhook
 - [x] Gitlab Webhook
@@ -26,9 +28,12 @@ A simple git webhook event notification for facebook messenger.
 5. Go to webhook __**Settings->Integrations->URL**__
 
 `http://yourserverip:port/integrate/webhook/messengerGroupChatID`
+- Group Chat ID shown on the parameter of messenger.com when you select the specific groupchat.
+
 
 _sample_
-`http://182.232.34.23:3005/integrate/webhook/1818601588228287`
+`http://182.232.34.23:3005/integrate/webhook/1818601588228287` or 
+`http://gitmessengerchatbot.com:3005/integrate/webhook/1818601588228287`
 
 ![](https://i.imgur.com/v392OCO.gif)
 
