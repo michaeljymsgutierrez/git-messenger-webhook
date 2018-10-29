@@ -5,13 +5,15 @@ A simple git webhook event notification for facebook messenger.
 
 - [x] Github Webhook
 - [x] Gitlab Webhook
+- [ ] Bitbucket Webhook
 
 1. _**clone**_ this repo and do _**npm install**_
 ![](https://i.imgur.com/ltOWyLO.gif )
 
 
 2. install _**pm2**_ package `npm install pm2 -g`
-3. create _**.env**_  file and type
+3. create _**.env**_  file and type `disable otp password in facebook account`
+
 ```
   EMAIL: "facebookemail@gmail.com" //fb email
   PASSWORD: "facebookpassword"     //fb password
