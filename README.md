@@ -12,7 +12,7 @@ A simple git webhook event notification for facebook messenger.
 
 
 2. install _**pm2**_ package `npm install pm2 -g`
-3. create _**.env**_  file and type `disable otp password in facebook account`
+3. create _**.env**_  file and type `disable otp password in facebook login`
 
 ```
   EMAIL: "facebookemail@gmail.com" //fb email
