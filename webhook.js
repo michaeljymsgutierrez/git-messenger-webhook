@@ -11,8 +11,9 @@ const fastify = require('fastify')({
   logger: true,
 });
 
-let host = ip.address();
-let port = process.env.WEBHOOK_PORT ? process.env.WEBHOOK_PORT : '8080';
+const host = ip.address();
+const port = process.env.WEBHOOK_PORT ? process.env.WEBHOOK_PORT : '8080';
+
 let AUTHOR = null;
 let DATE = null;
 let HASH = null;
