@@ -1,8 +1,7 @@
-/**
- * Git + Facebook Webhook API
- * Created by: Chaelgutierrez
- */
-("use strict");
+// Git + Facebook Webhook API
+// Created by: Chaelgutierrez, Mharchicano
+
+"use strict";
 
 require("dotenv").config();
 const login = require("facebook-chat-api");
