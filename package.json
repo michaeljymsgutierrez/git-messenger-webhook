@@ -9,7 +9,7 @@
     "fastify": "^1.8.0",
     "ip": "^1.1.5",
     "pm2": "^3.2.2",
-    "shelljs": "^0.8.2"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {},
   "scripts": {
